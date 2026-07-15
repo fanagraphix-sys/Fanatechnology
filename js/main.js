@@ -20,6 +20,33 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Mobile Menu Toggle
+  const hamburger = document.getElementById('hamburger');
+  const offcanvasMenu = document.getElementById('offcanvas-menu');
+  const offcanvasOverlay = document.getElementById('offcanvas-overlay');
+  const closeMenuBtn = document.getElementById('close-menu');
+  const offcanvasLinks = document.querySelectorAll('.offcanvas-link');
+
+  if (hamburger) {
+    function openMenu() {
+      offcanvasMenu.classList.add('active');
+      offcanvasOverlay.classList.add('active');
+    }
+
+    function closeMenu() {
+      offcanvasMenu.classList.remove('active');
+      offcanvasOverlay.classList.remove('active');
+    }
+
+    hamburger.addEventListener('click', openMenu);
+    closeMenuBtn.addEventListener('click', closeMenu);
+    offcanvasOverlay.addEventListener('click', closeMenu);
+
+    offcanvasLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+  }
+
   // Scroll Reveal Animations
   const reveals = document.querySelectorAll(".reveal");
   const revealOnScroll = () => {
