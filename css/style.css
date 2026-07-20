@@ -562,14 +562,6 @@ section { padding: 100px 0; position: relative; }
   gap: 30px;
   width: max-content;
   flex-shrink: 0;
-  animation: marquee-scroll 40s linear infinite;
-}
-.marquee-container:hover .marquee-track {
-  animation-play-state: paused;
-}
-@keyframes marquee-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-100% - 30px)); }
 }
 .marquee-container .portfolio-card,
 .marquee-container .service-banner-card,

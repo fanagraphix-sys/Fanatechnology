@@ -208,99 +208,63 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Portfolio Marquee
-  const portfolioMarquee = document.getElementById("portfolio-marquee");
-  if (portfolioMarquee) {
-    const originalCards = Array.from(portfolioMarquee.children);
-    portfolioMarquee.innerHTML = '';
+  // Advanced JS Marquee (Supports Auto-Scroll AND Finger Swipe)
+  const setupMarquee = (marqueeId) => {
+    const marqueeContainer = document.getElementById(marqueeId);
+    if (!marqueeContainer) return;
     
-    const track1 = document.createElement("div");
-    track1.className = "marquee-track";
-    const track2 = document.createElement("div");
-    track2.className = "marquee-track";
-    track2.setAttribute("aria-hidden", "true");
+    const originalCards = Array.from(marqueeContainer.children);
+    marqueeContainer.innerHTML = '';
     
-    originalCards.forEach(card => {
-      // Remove reveal class so they don't fade in weirdly inside the marquee
-      card.classList.remove("reveal");
-      card.style.transitionDelay = "0s";
-      
-      track1.appendChild(card);
-      track2.appendChild(card.cloneNode(true));
-    });
+    const track = document.createElement("div");
+    track.className = "marquee-track";
     
-    portfolioMarquee.appendChild(track1);
-    portfolioMarquee.appendChild(track2);
-  }
+    // Clone elements 3 times to create an infinite scroll buffer
+    for (let i = 0; i < 3; i++) {
+      originalCards.forEach(card => {
+        const clone = card.cloneNode(true);
+        clone.classList.remove("reveal");
+        clone.style.transitionDelay = "0s";
+        track.appendChild(clone);
+      });
+    }
+    
+    marqueeContainer.appendChild(track);
+    
+    // Ensure native scrolling is enabled
+    marqueeContainer.style.overflowX = 'auto';
+    marqueeContainer.style.scrollbarWidth = 'none';
+    marqueeContainer.style.msOverflowStyle = 'none';
+    
+    let isHovered = false;
+    let isTouching = false;
+    
+    // Pause on hover or touch
+    marqueeContainer.addEventListener('mouseenter', () => isHovered = true);
+    marqueeContainer.addEventListener('mouseleave', () => isHovered = false);
+    marqueeContainer.addEventListener('touchstart', () => isTouching = true, {passive: true});
+    marqueeContainer.addEventListener('touchend', () => isTouching = false);
+    
+    const scrollLoop = () => {
+      if (!isHovered && !isTouching) {
+        marqueeContainer.scrollLeft += 1; // Adjust speed here
+        
+        // When we scroll past the first set of items, snap back seamlessly
+        const setWidth = track.scrollWidth / 3;
+        if (marqueeContainer.scrollLeft >= setWidth) {
+          marqueeContainer.scrollLeft -= setWidth;
+        }
+      }
+      requestAnimationFrame(scrollLoop);
+    };
+    
+    requestAnimationFrame(scrollLoop);
+  };
 
-  // Services Marquee
-  const servicesMarquee = document.getElementById("services-marquee");
-  if (servicesMarquee) {
-    const originalCards = Array.from(servicesMarquee.children);
-    servicesMarquee.innerHTML = '';
-    
-    const track1 = document.createElement("div");
-    track1.className = "marquee-track";
-    const track2 = document.createElement("div");
-    track2.className = "marquee-track";
-    track2.setAttribute("aria-hidden", "true");
-    
-    originalCards.forEach(card => {
-      card.classList.remove("reveal");
-      card.style.transitionDelay = "0s";
-      track1.appendChild(card);
-      track2.appendChild(card.cloneNode(true));
-    });
-    
-    servicesMarquee.appendChild(track1);
-    servicesMarquee.appendChild(track2);
-  }
-
-  // Clients Marquee
-  const clientsMarquee = document.getElementById("client-marquee");
-  if (clientsMarquee) {
-    const originalCards = Array.from(clientsMarquee.children);
-    clientsMarquee.innerHTML = '';
-    
-    const track1 = document.createElement("div");
-    track1.className = "marquee-track";
-    const track2 = document.createElement("div");
-    track2.className = "marquee-track";
-    track2.setAttribute("aria-hidden", "true");
-    
-    originalCards.forEach(card => {
-      card.classList.remove("reveal");
-      card.style.transitionDelay = "0s";
-      track1.appendChild(card);
-      track2.appendChild(card.cloneNode(true));
-    });
-    
-    clientsMarquee.appendChild(track1);
-    clientsMarquee.appendChild(track2);
-  }
-
-  // Testimonials Marquee
-  const testimonialMarquee = document.getElementById("testimonial-marquee");
-  if (testimonialMarquee) {
-    const originalCards = Array.from(testimonialMarquee.children);
-    testimonialMarquee.innerHTML = '';
-    
-    const track1 = document.createElement("div");
-    track1.className = "marquee-track";
-    const track2 = document.createElement("div");
-    track2.className = "marquee-track";
-    track2.setAttribute("aria-hidden", "true");
-    
-    originalCards.forEach(card => {
-      card.classList.remove("reveal");
-      card.style.transitionDelay = "0s";
-      track1.appendChild(card);
-      track2.appendChild(card.cloneNode(true));
-    });
-    
-    testimonialMarquee.appendChild(track1);
-    testimonialMarquee.appendChild(track2);
-  }
+  setupMarquee("portfolio-marquee");
+  setupMarquee("services-marquee");
+  setupMarquee("client-marquee");
+  setupMarquee("testimonial-marquee");
 
   // Modal Logic
   const modal = document.getElementById("quoteModal");
