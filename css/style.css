@@ -1109,20 +1109,12 @@ footer {
   }
   .marquee-container {
     overflow-x: auto !important;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
     -ms-overflow-style: none;
     scrollbar-width: none;
     cursor: grab;
   }
   .marquee-container::-webkit-scrollbar {
     display: none;
-  }
-  .marquee-container .portfolio-card,
-  .marquee-container .service-banner-card,
-  .marquee-container .testimonial-card,
-  .client-logo {
-    scroll-snap-align: center;
   }
 }
 

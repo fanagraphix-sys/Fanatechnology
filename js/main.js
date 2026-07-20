@@ -245,15 +245,20 @@ document.addEventListener("DOMContentLoaded", () => {
     marqueeContainer.addEventListener('touchstart', () => isTouching = true, {passive: true});
     marqueeContainer.addEventListener('touchend', () => isTouching = false);
     
+    // Handle infinite looping during manual swipe
+    marqueeContainer.addEventListener('scroll', () => {
+      const setWidth = track.scrollWidth / 3;
+      if (marqueeContainer.scrollLeft >= setWidth * 2) {
+        marqueeContainer.scrollLeft -= setWidth;
+      } else if (marqueeContainer.scrollLeft <= 0) {
+        marqueeContainer.scrollLeft += setWidth;
+      }
+    });
+
+    // Auto-scroll loop
     const scrollLoop = () => {
       if (!isHovered && !isTouching) {
         marqueeContainer.scrollLeft += 1; // Adjust speed here
-        
-        // When we scroll past the first set of items, snap back seamlessly
-        const setWidth = track.scrollWidth / 3;
-        if (marqueeContainer.scrollLeft >= setWidth) {
-          marqueeContainer.scrollLeft -= setWidth;
-        }
       }
       requestAnimationFrame(scrollLoop);
     };
