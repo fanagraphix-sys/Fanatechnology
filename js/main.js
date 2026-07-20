@@ -93,16 +93,31 @@ document.addEventListener("DOMContentLoaded", () => {
     question.addEventListener("click", () => {
       const item = question.parentElement;
       const isActive = item.classList.contains("active");
+      const icon = question.querySelector("i");
       
       // Close all
       document.querySelectorAll(".faq-item").forEach(faq => {
         faq.classList.remove("active");
         faq.querySelector(".faq-question").classList.remove("active");
+        
+        // Reset icon to plus
+        const faqIcon = faq.querySelector(".faq-question i");
+        if (faqIcon) {
+          faqIcon.classList.remove("fa-minus");
+          faqIcon.classList.add("fa-plus");
+        }
       });
       
+      // Open clicked item if it wasn't already active
       if (!isActive) {
         item.classList.add("active");
         question.classList.add("active");
+        
+        // Change icon to minus
+        if (icon) {
+          icon.classList.remove("fa-plus");
+          icon.classList.add("fa-minus");
+        }
       }
     });
   });
@@ -313,5 +328,28 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // Mobile Bottom Menu Active State
+  const bottomMenuItems = document.querySelectorAll('.bottom-menu-item');
+  const sections = document.querySelectorAll('section');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (window.scrollY >= (sectionTop - sectionHeight / 3)) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    bottomMenuItems.forEach(item => {
+      item.classList.remove('active');
+      if (item.getAttribute('href').includes(current)) {
+        item.classList.add('active');
+      }
+    });
+  });
 
 });

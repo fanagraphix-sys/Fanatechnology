@@ -14,13 +14,15 @@
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="stylesheet" href="css/style.css?v=11">
 </head>
 <body>
 
   <!-- Preloader -->
   <div id="preloader">
-    <div class="loader-logo">Fana Technology</div>
+    <div class="loader-logo" style="background: white; padding: 12px 32px; border-radius: 12px; display: inline-flex; align-items: center;">
+      <img src="images/logo.png" alt="Fana Technology" style="height: 45px; width: auto; object-fit: contain;">
+    </div>
   </div>
 
   <!-- Top Bar -->
@@ -551,7 +553,7 @@
     
     <div class="faq-item reveal">
       <div class="faq-question">
-        Can I update the website myself? <i class="fa-solid fa-chevron-down"></i>
+        Can I update the website myself? <i class="fa-solid fa-plus"></i>
       </div>
       <div class="faq-answer">
         <div class="faq-answer-inner">
@@ -562,7 +564,7 @@
     
     <div class="faq-item reveal">
       <div class="faq-question">
-        Do you offer support after launch? <i class="fa-solid fa-chevron-down"></i>
+        Do you offer support after launch? <i class="fa-solid fa-plus"></i>
       </div>
       <div class="faq-answer">
         <div class="faq-answer-inner">
@@ -881,7 +883,27 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/main.js"></script>
+  <!-- Mobile Bottom Menu -->
+  <div class="mobile-bottom-menu">
+    <a href="#home" class="bottom-menu-item active">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </a>
+    <a href="#services" class="bottom-menu-item">
+      <i class="fa-solid fa-laptop-code"></i>
+      <span>Services</span>
+    </a>
+    <a href="#pricing" class="bottom-menu-item">
+      <i class="fa-solid fa-tags"></i>
+      <span>Packages</span>
+    </a>
+    <a href="#contact" class="bottom-menu-item">
+      <i class="fa-solid fa-envelope"></i>
+      <span>Contact</span>
+    </a>
+  </div>
+
+  <script src="js/main.js?v=10"></script>
 </body>
 </html>
 
