@@ -277,6 +277,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeModalBtn = document.getElementById("closeModal");
   
   if (modal) {
+    // Auto Popup after 5 seconds
+    if (!sessionStorage.getItem('popupShown')) {
+      setTimeout(() => {
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+        sessionStorage.setItem('popupShown', 'true');
+      }, 5000);
+    }
+
     openModalBtns.forEach(btn => {
       btn.addEventListener("click", () => {
         modal.classList.add("active");

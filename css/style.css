@@ -1027,11 +1027,29 @@ footer {
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .hamburger { display: block; }
-  .hero { padding-top: 180px; }
+  .hero { padding-top: 150px; }
   .hero-container { justify-content: center; text-align: center; flex-direction: column; }
   .hero-content { min-width: 100%; text-align: center; }
-  .hero-buttons { justify-content: center; }
-  .hero-mockup-wrapper { margin-top: 60px; height: 350px; }
+  .hero h1 { font-size: 2.5rem; line-height: 1.2; margin-bottom: 15px; }
+  .hero h2 { font-size: 1.2rem; margin-bottom: 20px; }
+  .hero-content p { font-size: 1rem; }
+  .section-title h2, section h2 { font-size: 2rem; }
+  
+  .hero-buttons { 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 15px; 
+    width: 100%;
+    max-width: 300px;
+    margin: 30px auto 0;
+  }
+  .hero-buttons .btn-primary, .hero-buttons .btn-outline {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero-mockup-wrapper { margin-top: 40px; height: 300px; }
   .grid-2, .grid-3, .grid-4, .stats-grid { grid-template-columns: 1fr; }
   .timeline::before { left: 30px; }
   .timeline-item, .timeline-item:nth-child(even) { justify-content: flex-end; padding-right: 0; padding-left: 70px; }
