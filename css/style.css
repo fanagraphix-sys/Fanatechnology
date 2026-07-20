@@ -990,10 +990,10 @@ footer {
   .hamburger { display: block; }
   .hero { padding-top: 180px; }
   .hero-container { justify-content: center; text-align: center; flex-direction: column; }
-  .hero-content { min-width: 100%; }
+  .hero-content { min-width: 100%; text-align: center; }
   .hero-buttons { justify-content: center; }
   .hero-mockup-wrapper { margin-top: 60px; height: 350px; }
-  .grid-2 { grid-template-columns: 1fr; }
+  .grid-2, .grid-3, .grid-4, .stats-grid { grid-template-columns: 1fr; }
   .timeline::before { left: 30px; }
   .timeline-item, .timeline-item:nth-child(even) { justify-content: flex-end; padding-right: 0; padding-left: 70px; }
   .timeline-content, .timeline-item:nth-child(even) .timeline-content { width: 100%; }
