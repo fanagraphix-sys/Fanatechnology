@@ -1,579 +1,909 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>Arshad Ahamed | Professional Logo & Brand Identity Designer</title>
-    <meta name="description" content="I transform ideas into powerful visual identities through minimalist, memorable, and meaningful designs. Hire Arshad Ahamed for expert logo design, typography, and branding solutions based in Muthupettai.">
-    <meta name="keywords" content="Arshad Ahamed, Logo Designer, Brand Identity, Graphic Design, Typography, Minimalist Logo, Muthupettai, Freelance Designer, UI Graphics, Packaging Design">
-    <meta name="author" content="Arshad Ahamed">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Arshad Ahamed | Brand Identity Designer">
-    <meta property="og:description" content="Transforming ideas into powerful visual identities. Explore my portfolio of minimalist and memorable branding projects.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="image/16dc77d5-8566-4b30-88f4-9e01a3ba52b9.png">
-    <meta property="og:url" content="https://arshadahamed.com">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Phosphor Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <!-- AOS Animation CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fana Technology | Transforming Ideas Into Digital Success</title>
+  <meta name="description" content="We build stunning websites, powerful mobile applications, custom software, and creative branding solutions that help businesses grow online.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css?v=14">
 </head>
 <body>
-    <!-- Navigation -->
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="#home" class="logo">Arshad Ahamed.</a>
-            
-            <nav class="nav-links">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#process" class="nav-link">Process</a>
-                <a href="#pricing" class="nav-link">Pricing</a>
-                <a href="#faq" class="nav-link">FAQ</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <a href="#contact" class="btn-enquiry">Enquiry</a>
-                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
-                    <i class="ph ph-sun"></i>
-                </button>
-            </nav>
 
-            <button class="menu-toggle" aria-label="Toggle Navigation">
-                <i class="ph ph-list"></i>
-            </button>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader-logo" style="background: white; padding: 12px 32px; border-radius: 12px; display: inline-flex; align-items: center;">
+      <img src="images/logo.png" alt="Fana Technology" style="height: 45px; width: auto; object-fit: contain;">
+    </div>
+  </div>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-bar-marquee">
+      <span>🚀 Let's Build Your Digital Future Together | Websites • E-Commerce • Mobile Apps • Digital Marketing | 📞 86101 83525</span>
+      <span>🚀 Let's Build Your Digital Future Together | Websites • E-Commerce • Mobile Apps • Digital Marketing | 📞 86101 83525</span>
+      <span>🚀 Let's Build Your Digital Future Together | Websites • E-Commerce • Mobile Apps • Digital Marketing | 📞 86101 83525</span>
+      <span>🚀 Let's Build Your Digital Future Together | Websites • E-Commerce • Mobile Apps • Digital Marketing | 📞 86101 83525</span>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo" style="background: white; padding: 6px 16px; border-radius: 8px; display: inline-flex; align-items: center;">
+        <img src="images/logo.png" alt="Fana Technology" style="height: 32px; width: auto; object-fit: contain;">
+      </a>
+      <div class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Packages</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="javascript:void(0)" class="btn-primary open-modal-btn" style="padding: 10px 20px; font-size: 0.9rem;">Get Free Quote</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Off-Canvas Mobile Menu -->
+  <div class="offcanvas-overlay" id="offcanvas-overlay"></div>
+  <div class="offcanvas-menu" id="offcanvas-menu">
+    <div class="offcanvas-header">
+      <a href="#" class="logo" style="background: white; padding: 6px 16px; border-radius: 8px; display: inline-flex; align-items: center;">
+        <img src="images/logo.png" alt="Fana Technology" style="height: 32px; width: auto; object-fit: contain;">
+      </a>
+      <button class="close-menu" id="close-menu"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="offcanvas-links">
+      <a href="#home" class="offcanvas-link active">Home</a>
+      <a href="#about" class="offcanvas-link">About</a>
+      <a href="#services" class="offcanvas-link">Services</a>
+      <a href="#pricing" class="offcanvas-link">Packages</a>
+      <a href="#portfolio" class="offcanvas-link">Portfolio</a>
+      <a href="#faq" class="offcanvas-link">FAQ</a>
+      <a href="#contact" class="offcanvas-link">Contact</a>
+      <a href="javascript:void(0)" class="btn-primary open-modal-btn" style="padding: 12px 20px; font-size: 1rem; text-align: center; margin-top: 20px;">Get Free Quote</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="glow-mesh"></div>
+    <div class="glow-mesh-2"></div>
+    
+    <div class="container hero-container">
+      <div class="hero-content reveal">
+        <h1>Build <span class="text-gradient-primary">Smarter.</span><br>Grow <span class="text-gradient-secondary">Faster.</span></h1>
+        <h2>Transform Your Business with Premium Digital Solutions.</h2>
+        <p>We build stunning websites, powerful mobile applications, custom software, and creative branding solutions that help businesses grow online.</p>
+        <div class="hero-buttons">
+          <a href="https://wa.me/918610183525" target="_blank" class="btn-primary">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#pricing" class="btn-outline">View Packages</a>
         </div>
-    </header>
-
-    <main>
-        <!-- Home Section -->
-        <section id="home" class="hero">
-            <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
-                <p class="greeting">Hello, I'm</p>
-                <h1 class="name">Arshad Ahamed</h1>
-                <h2 class="title">Logo & Brand Identity Designer</h2>
-                <p class="bio">I transform ideas into powerful visual identities through minimalist, memorable, and meaningful designs.</p>
-                <div class="hero-buttons">
-                    <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
-                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
-                </div>
-                <div class="hero-contact-mobile">
-                    <div class="icon-circle"><i class="ph ph-phone"></i></div>
-                    <span>Call: 86101 83525</span>
-                </div>
-            </div>
-            <div class="hero-graphics" data-aos="zoom-in" data-aos-duration="1200">
-                <div class="glow-orb orb-1"></div>
-                <div class="glow-orb orb-2"></div>
-                
-                <div class="profile-container">
-                    <img src="image/16dc77d5-8566-4b30-88f4-9e01a3ba52b9.png" alt="Arshad Ahamed" class="profile-img">
-                    
-                    <!-- Floating Icons -->
-                    <div class="floating-icon icon-ai" title="Adobe Illustrator">
-                        <img src="image/illustrator.png" alt="Adobe Illustrator" style="width: 40px; height: 40px; border-radius: 10px; object-fit: contain;">
-                    </div>
-                    <div class="floating-icon icon-ps" title="Adobe Photoshop">
-                        <img src="image/photoshop.png" alt="Adobe Photoshop" style="width: 40px; height: 40px; border-radius: 10px; object-fit: contain;">
-                    </div>
-                    <div class="floating-icon icon-brand" title="Brand Identity">
-                        <i class="ph ph-fingerprint"></i>
-                    </div>
-                    <div class="floating-icon icon-type" title="Typography">
-                        <i class="ph ph-text-aa"></i>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Marquee Section -->
-        <section class="marquee-section">
-            <div class="marquee-wrapper">
-                <div class="marquee-track track-left">
-                    <div class="marquee-content left-scroll">
-                        <span>LOGO DESIGN <i class="ph-fill ph-star-four"></i> BRAND IDENTITY <i class="ph-fill ph-star-four"></i> TYPOGRAPHY <i class="ph-fill ph-star-four"></i> PACKAGING <i class="ph-fill ph-star-four"></i> UI GRAPHICS <i class="ph-fill ph-star-four"></i></span>
-                        <span>LOGO DESIGN <i class="ph-fill ph-star-four"></i> BRAND IDENTITY <i class="ph-fill ph-star-four"></i> TYPOGRAPHY <i class="ph-fill ph-star-four"></i> PACKAGING <i class="ph-fill ph-star-four"></i> UI GRAPHICS <i class="ph-fill ph-star-four"></i></span>
-                        <span>LOGO DESIGN <i class="ph-fill ph-star-four"></i> BRAND IDENTITY <i class="ph-fill ph-star-four"></i> TYPOGRAPHY <i class="ph-fill ph-star-four"></i> PACKAGING <i class="ph-fill ph-star-four"></i> UI GRAPHICS <i class="ph-fill ph-star-four"></i></span>
-                        <span>LOGO DESIGN <i class="ph-fill ph-star-four"></i> BRAND IDENTITY <i class="ph-fill ph-star-four"></i> TYPOGRAPHY <i class="ph-fill ph-star-four"></i> PACKAGING <i class="ph-fill ph-star-four"></i> UI GRAPHICS <i class="ph-fill ph-star-four"></i></span>
-                    </div>
-                </div>
-                <div class="marquee-track track-right">
-                    <div class="marquee-content right-scroll">
-                        <span>CREATIVE DESIGN <i class="ph-fill ph-star-four"></i> MINIMALIST <i class="ph-fill ph-star-four"></i> MEMORABLE <i class="ph-fill ph-star-four"></i> MODERN <i class="ph-fill ph-star-four"></i> TIMELESS <i class="ph-fill ph-star-four"></i></span>
-                        <span>CREATIVE DESIGN <i class="ph-fill ph-star-four"></i> MINIMALIST <i class="ph-fill ph-star-four"></i> MEMORABLE <i class="ph-fill ph-star-four"></i> MODERN <i class="ph-fill ph-star-four"></i> TIMELESS <i class="ph-fill ph-star-four"></i></span>
-                        <span>CREATIVE DESIGN <i class="ph-fill ph-star-four"></i> MINIMALIST <i class="ph-fill ph-star-four"></i> MEMORABLE <i class="ph-fill ph-star-four"></i> MODERN <i class="ph-fill ph-star-four"></i> TIMELESS <i class="ph-fill ph-star-four"></i></span>
-                        <span>CREATIVE DESIGN <i class="ph-fill ph-star-four"></i> MINIMALIST <i class="ph-fill ph-star-four"></i> MEMORABLE <i class="ph-fill ph-star-four"></i> MODERN <i class="ph-fill ph-star-four"></i> TIMELESS <i class="ph-fill ph-star-four"></i></span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Us Section -->
-        <section id="about" class="about-section">
-            <div class="section-header" data-aos="fade-up">
-                <h2>About Me</h2>
-                <div class="header-line"></div>
-            </div>
-            
-            <div class="about-container">
-                <div class="about-text" data-aos="fade-up" data-aos-delay="100">
-                    <h3>Based in <span class="highlight">Muthupettai</span></h3>
-                    <p>I transform ideas into powerful visual identities through minimalist, memorable, and meaningful designs.</p>
-                    <p>With a keen eye for detail and a passion for storytelling, I craft logos and branding that resonate with audiences and leave a lasting impression.</p>
-                    
-                    <div class="stats">
-                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">Happy Clients</span>
-                        </div>
-                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
-                            <span class="stat-number">5+</span>
-                            <span class="stat-label">Years of Experience</span>
-                        </div>
-                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="500">
-                            <span class="stat-number">1,200+</span>
-                            <span class="stat-label">Projects Completed</span>
-                        </div>
-                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="600">
-                            <span class="stat-number">98%</span>
-                            <span class="stat-label">Client Satisfaction</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Features / Why Choose Me Section -->
-        <section id="features" class="features-section">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Why Choose Me</h2>
-                <div class="header-line"></div>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="feature-icon"><i class="ph ph-smiley"></i></div>
-                    <h3>Beginner-friendly communication</h3>
-                </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="150">
-                    <div class="feature-icon"><i class="ph ph-bezier-curve"></i></div>
-                    <h3>Simple & clean logo style</h3>
-                </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature-icon"><i class="ph ph-arrows-out"></i></div>
-                    <h3>Scalable logo output</h3>
-                </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="250">
-                    <div class="feature-icon"><i class="ph ph-list-checks"></i></div>
-                    <h3>Clear design process</h3>
-                </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature-icon"><i class="ph ph-files"></i></div>
-                    <h3>Brand-ready final files</h3>
-                </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="350">
-                    <div class="feature-icon"><i class="ph ph-calendar-check"></i></div>
-                    <h3>On-time delivery</h3>
-                </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="feature-icon"><i class="ph ph-lightning"></i></div>
-                    <h3>Fast execution</h3>
-                </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="450">
-                    <div class="feature-icon"><i class="ph ph-arrows-clockwise"></i></div>
-                    <h3>Revision-focused workflow</h3>
-                </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="feature-icon"><i class="ph ph-chat-circle-dots"></i></div>
-                    <h3>Direct designer communication</h3>
-                </div>
-            </div>
-        </section>
-
-        <!-- Process Section -->
-        <section id="process" class="process-section">
-            <div class="section-header" data-aos="fade-up">
-                <h2>My Process</h2>
-                <div class="header-line"></div>
-            </div>
-            <div class="process-grid">
-                <!-- Step 1 -->
-                <div class="process-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="step-number">01</div>
-                    <div class="process-icon"><i class="ph ph-chats-circle"></i></div>
-                    <h3>Discuss & Discover</h3>
-                    <p>We understand your brand, goals, audience, and design requirements. Our team gathers all the necessary information to create a design strategy that aligns with your vision.</p>
-                </div>
-                
-                <!-- Step 2 -->
-                <div class="process-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="step-number">02</div>
-                    <div class="process-icon"><i class="ph ph-bezier-curve"></i></div>
-                    <h3>Design & Refine</h3>
-                    <p>Our designers create visually appealing concepts tailored to your brand identity. We share design drafts, collect your feedback, and refine every detail until you're satisfied.</p>
-                </div>
-                
-                <!-- Step 3 -->
-                <div class="process-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="step-number">03</div>
-                    <div class="process-icon"><i class="ph ph-rocket-launch"></i></div>
-                    <h3>Deliver & Support</h3>
-                    <p>Receive high-quality, print-ready and digital-ready design files. We ensure timely delivery and provide ongoing support for any future updates or modifications.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Section -->
-        <section id="pricing" class="pricing-section">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Pricing Plans</h2>
-                <div class="header-line"></div>
-            </div>
-            <div class="pricing-grid">
-                <!-- Basic Plan -->
-                <div class="pricing-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="pricing-header">
-                        <h3>Primary Logo Design</h3>
-                        <div class="price">
-                            <span class="currency">₹</span><span class="amount">1500</span>
-                        </div>
-                        <p class="desc">What's included in this plan:</p>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="ph ph-check-circle"></i> 1–2 logo concepts</li>
-                        <li><i class="ph ph-check-circle"></i> Fast turnaround</li>
-                        <li><i class="ph ph-check-circle"></i> Up to 3 revisions</li>
-                        <li><i class="ph ph-check-circle"></i> Final logo files (PNG, JPG)</li>
-                        <li><i class="ph ph-check-circle"></i> Scalable & clean design</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-secondary pricing-btn">Choose Primary</a>
-                </div>
-
-                <!-- Premium Plan -->
-                <div class="pricing-card featured" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="popular-badge">Brand Ready</div>
-                    <div class="pricing-header">
-                        <h3>Secondary Logo Design</h3>
-                        <div class="price">
-                            <span class="currency">₹</span><span class="amount">3000</span>
-                        </div>
-                        <p class="desc">Designed for long term brand use:</p>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="ph ph-check-circle"></i> Professional, Brand Ready Logo</li>
-                        <li><i class="ph ph-check-circle"></i> 2-3 Logo Concepts</li>
-                        <li><i class="ph ph-check-circle"></i> Up to 5 revisions</li>
-                        <li><i class="ph ph-check-circle"></i> Fast Turnaround</li>
-                        <li><i class="ph ph-check-circle"></i> Final Logo files with editable files</li>
-                        <li><i class="ph ph-check-circle"></i> Scalable & versatile logo design</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary pricing-btn">Choose Premium</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Reviews Section -->
-        <section id="reviews" class="reviews-section">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Client Reviews</h2>
-                <div class="header-line"></div>
-            </div>
-            <div class="review-container" data-aos="zoom-in">
-                <i class="ph ph-quotes"></i>
-                <div class="typing-review">
-                    "<span id="typed-review"></span><span class="cursor">|</span>"
-                </div>
-                <div class="reviewer-info">
-                    <h4 id="reviewer-name"></h4>
-                    <p id="reviewer-role"></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" class="faq-section">
-            <div class="section-header" data-aos="fade-up">
-                <h2>FAQ</h2>
-                <div class="header-line"></div>
-            </div>
-            <div class="faq-container">
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-                    <button class="faq-question">
-                        <span>What graphic design services do you offer?</span>
-                        <i class="ph ph-caret-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We offer logo design, branding, social media posts, brochures, flyers, business cards, banners, packaging, UI graphics, and custom marketing materials.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
-                    <button class="faq-question">
-                        <span>How long does it take to complete a project?</span>
-                        <i class="ph ph-caret-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Most graphic design projects are completed within 2–7 business days, depending on the complexity and scope.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-                    <button class="faq-question">
-                        <span>Can I request revisions?</span>
-                        <i class="ph ph-caret-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes! We provide revisions to ensure the final design meets your expectations and perfectly represents your brand.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="250">
-                    <button class="faq-question">
-                        <span>What file formats will I receive?</span>
-                        <i class="ph ph-caret-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>You'll receive high-quality files in AI, PDF, PNG, JPG, SVG, and EPS formats (where applicable), suitable for both print and digital use.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-                    <button class="faq-question">
-                        <span>Do you create custom designs for businesses?</span>
-                        <i class="ph ph-caret-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Absolutely. Every design is created from scratch to match your brand identity, industry, and marketing goals.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="350">
-                    <button class="faq-question">
-                        <span>How can I place an order?</span>
-                        <i class="ph ph-caret-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Simply call or WhatsApp <strong style="color:var(--primary)">+91 89391 85200</strong>, or send us your project requirements, and we'll provide a free consultation and quotation.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
-                    <button class="faq-question">
-                        <span>Do you design for social media and digital marketing?</span>
-                        <i class="ph ph-caret-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes! We create eye-catching social media posts, banners, advertisements, promotional creatives, and digital marketing graphics.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="450">
-                    <button class="faq-question">
-                        <span>How can I contact your team?</span>
-                        <i class="ph ph-caret-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>You can reach us anytime by calling or WhatsApp at <strong style="color:var(--primary)">+91 89391 85200</strong>. We're happy to discuss your project and help bring your ideas to life.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="portfolio-section">
-            <div class="section-header">
-                <h2>My Portfolio</h2>
-                <div class="header-line"></div>
-            </div>
-            
-            <div class="portfolio-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-img placeholder-img-1">
-                        <div class="overlay">
-                            <a href="#" class="view-btn"><i class="ph ph-eye"></i> View</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>E-Commerce Platform</h3>
-                        <p>A modern online shopping experience with seamless checkout.</p>
-                        <div class="tags">
-                            <span>UI/UX</span>
-                            <span>Web Dev</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-img placeholder-img-2">
-                        <div class="overlay">
-                            <a href="#" class="view-btn"><i class="ph ph-eye"></i> View</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Finance Dashboard</h3>
-                        <p>Data visualization tool for managing personal finances.</p>
-                        <div class="tags">
-                            <span>Dashboard</span>
-                            <span>Design</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-img placeholder-img-3">
-                        <div class="overlay">
-                            <a href="#" class="view-btn"><i class="ph ph-eye"></i> View</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Creative Agency</h3>
-                        <p>Landing page for a digital marketing and creative agency.</p>
-                        <div class="tags">
-                            <span>Landing Page</span>
-                            <span>Branding</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Us Section -->
-        <section id="contact" class="contact-section">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Contact Us</h2>
-                <div class="header-line"></div>
-            </div>
-            
-            <div class="contact-container">
-                <div class="contact-info" data-aos="fade-right">
-                    <h3>Let's work together!</h3>
-                    <p>I'm currently available for freelance work and open to new opportunities. If you have a project in mind, let's talk.</p>
-                    
-                    <div class="contact-methods">
-                        <div class="method">
-                            <div class="icon-box"><i class="ph ph-map-pin"></i></div>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Muthupettai, Tamil Nadu</p>
-                            </div>
-                        </div>
-                        <div class="method">
-                            <div class="icon-box"><i class="ph ph-envelope"></i></div>
-                            <div>
-                                <h4>Email</h4>
-                                <p>hello@arshadahamed.com</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="#" class="social-btn whatsapp" title="WhatsApp"><i class="ph ph-whatsapp-logo"></i></a>
-                        <a href="#" class="social-btn instagram" title="Instagram"><i class="ph ph-instagram-logo"></i></a>
-                        <a href="#" class="social-btn youtube" title="YouTube"><i class="ph ph-youtube-logo"></i></a>
-                        <a href="#" class="social-btn behance" title="Behance"><i class="ph ph-behance-logo"></i></a>
-                    </div>
-                </div>
-                
-                <form class="contact-form" id="contactForm" data-aos="fade-left" data-aos-delay="200">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" required placeholder="John Doe">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" required placeholder="john@example.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" rows="5" required placeholder="Tell me about your project..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary submit-btn">Send Message <i class="ph ph-paper-plane-right"></i></button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <p>&copy; <span id="year"></span> Arshad Ahamed. All rights reserved.</p>
-            <p>Designed and built with passion from Muthupettai.</p>
+      </div>
+      
+      <div class="hero-visual reveal animate-float">
+        <div class="hero-image-wrapper">
+          <img src="images/hero-banner.jpg" alt="Premium Digital Agency" loading="lazy">
+          <!-- Glassmorphism accent card -->
+          <div class="hero-accent-card glass-card">
+             <div class="accent-icon"><i class="fa-solid fa-rocket"></i></div>
+             <div>
+                <h4>Accelerate Growth</h4>
+                <p>Digital solutions that scale</p>
+             </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
+  <!-- Clients Marquee -->
+  <section class="container reveal" style="padding: 40px 0 20px; max-width: 100vw; overflow: hidden;">
+    <p style="text-align: center; color: var(--text-secondary); margin-bottom: 30px; font-weight: 600; letter-spacing: 2px; font-size: 0.85rem; text-transform: uppercase;">Trusted by Innovative Companies</p>
+    <div class="marquee-container" id="client-marquee" style="background: rgba(255,255,255,0.02); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); padding: 30px 0;">
+       <img src="images/clients/client1.png" class="client-logo" alt="Client 1">
+       <img src="images/clients/client2.png" class="client-logo" alt="Client 2">
+       <img src="images/clients/client3.png" class="client-logo" alt="Client 3">
+       <img src="images/clients/client4.png" class="client-logo" alt="Client 4">
+       <img src="images/clients/client5.png" class="client-logo" alt="Client 5">
+       <img src="images/clients/client6.png" class="client-logo" alt="Client 6">
+       <img src="images/clients/client7.png" class="client-logo" alt="Client 7">
+       <img src="images/clients/client8.png" class="client-logo" alt="Client 8">
+       <img src="images/clients/client9.png" class="client-logo" alt="Client 9">
+       <img src="images/clients/client10.png" class="client-logo" alt="Client 10">
+    </div>
+  </section>
+  <!-- Services Section -->
+  <section id="services" class="container">
+    <div class="section-title reveal">
+      <h2>Premium <span class="text-gradient-primary">Services</span></h2>
+      <p>Cutting-edge digital solutions tailored for your business growth.</p>
+    </div>
+    <div class="marquee-container" id="services-marquee">
+      <div class="glass-card service-banner-card reveal">
+        <div class="service-banner-img">
+           <img src="images/banner-web.jpg" alt="Web Design" loading="lazy">
+        </div>
+        <div class="service-banner-content">
+          <h3>Web Design</h3>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Business Websites</li>
+            <li><i class="fa-solid fa-check"></i> Corporate Portals</li>
+            <li><i class="fa-solid fa-check"></i> Landing Pages</li>
+            <li><i class="fa-solid fa-check"></i> E-commerce Solutions</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="glass-card service-banner-card reveal">
+        <div class="service-banner-img">
+           <img src="images/banner-app.jpg" alt="App Development" loading="lazy">
+        </div>
+        <div class="service-banner-content">
+          <h3>App Development</h3>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Android & iOS Apps</li>
+            <li><i class="fa-solid fa-check"></i> UI/UX Design</li>
+            <li><i class="fa-solid fa-check"></i> Flutter Development</li>
+            <li><i class="fa-solid fa-check"></i> Business Applications</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="glass-card service-banner-card reveal">
+        <div class="service-banner-img">
+           <img src="images/banner-graphics.jpg" alt="Graphic Design" loading="lazy">
+        </div>
+        <div class="service-banner-content">
+          <h3>Graphic Design</h3>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Logo & Branding</li>
+            <li><i class="fa-solid fa-check"></i> Social Media Creatives</li>
+            <li><i class="fa-solid fa-check"></i> Marketing Materials</li>
+            <li><i class="fa-solid fa-check"></i> UI/UX Prototyping</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="glass-card service-banner-card reveal">
+        <div class="service-banner-img">
+           <img src="images/banner-billing.jpg" alt="Billing Software" loading="lazy">
+        </div>
+        <div class="service-banner-content">
+          <h3>Billing Software</h3>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Fast Retail Billing</li>
+            <li><i class="fa-solid fa-check"></i> GST Compliant</li>
+            <li><i class="fa-solid fa-check"></i> Inventory Management</li>
+            <li><i class="fa-solid fa-check"></i> Barcode Support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Floating Social Bar -->
-    <div class="floating-social-bar">
-        <a href="#" class="social-item whatsapp" aria-label="WhatsApp"><i class="ph ph-whatsapp-logo"></i></a>
-        <a href="#" class="social-item instagram" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
-        <a href="#" class="social-item behance" aria-label="Behance"><i class="ph ph-behance-logo"></i></a>
-        <a href="#" class="social-item youtube" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+  <!-- About Us -->
+  <section id="about" class="container">
+    <div class="grid-2" style="gap: 60px; align-items: center;">
+      <div class="about-img reveal fade-left">
+        <img src="images/about-us.png" alt="About Fana Technology" style="width: 100%; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); border: 1px solid var(--glass-border);">
+      </div>
+      <div class="about-content reveal fade-right">
+        <h2 style="font-size: 3rem; margin-bottom: 24px; line-height:1.2;">Who We <span class="text-gradient-primary">Are</span></h2>
+        <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;">
+          At Fana Technology, we specialize in delivering premium digital solutions tailored to elevate your business. From high-performance websites and intuitive mobile apps to stunning graphic design and robust billing software, we turn complex ideas into seamless digital experiences.
+        </p>
+        <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; margin-bottom: 30px;">
+          Our expert team combines modern UI/UX design with scalable architecture to ensure your digital presence is not only beautiful, but fully optimized for long-term growth and success.
+        </p>
+        <a href="#contact" class="btn-primary open-modal-btn" style="padding: 14px 32px; font-size: 1.05rem;">Start Your Journey</a>
+      </div>
+    </div>
+  </section>
+  <!-- Stats Section -->
+  <section id="stats" class="container" style="padding-top: 40px; padding-bottom: 40px;">
+    <div class="stats-grid">
+      <div class="stat-card glass-card reveal">
+        <div class="stat-number text-gradient-primary">100+</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div class="stat-card glass-card reveal" style="transition-delay: 0.1s;">
+        <div class="stat-number text-gradient-secondary">50+</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat-card glass-card reveal" style="transition-delay: 0.2s;">
+        <div class="stat-number text-gradient-primary">5+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-card glass-card reveal" style="transition-delay: 0.3s;">
+        <div class="stat-number text-gradient-secondary">24/7</div>
+        <div class="stat-label">Premium Support</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why-us" class="container">
+    <div class="section-title reveal">
+      <h2>Why <span class="text-gradient-secondary">Choose Us</span></h2>
+      <p>Experience the Fana Technology difference with our premium standards.</p>
+    </div>
+    <div class="grid-3">
+      <div class="glass-card feature-item reveal"><i class="fa-solid fa-wand-magic-sparkles"></i> Modern UI/UX Design</div>
+      <div class="glass-card feature-item reveal"><i class="fa-solid fa-mobile-button"></i> Mobile Responsive</div>
+      <div class="glass-card feature-item reveal"><i class="fa-solid fa-magnifying-glass-chart"></i> SEO Friendly</div>
+      <div class="glass-card feature-item reveal"><i class="fa-solid fa-bolt"></i> Lightning Fast Performance</div>
+      <div class="glass-card feature-item reveal"><i class="fa-solid fa-shield-halved"></i> Secure Development</div>
+      <div class="glass-card feature-item reveal"><i class="fa-solid fa-sliders"></i> Easy Admin Panel</div>
+      <div class="glass-card feature-item reveal"><i class="fa-solid fa-tag"></i> Affordable Pricing</div>
+      <div class="glass-card feature-item reveal"><i class="fa-solid fa-headset"></i> Lifetime Technical Guidance</div>
+      <div class="glass-card feature-item reveal"><i class="fa-solid fa-star"></i> Premium Support</div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="container">
+    <div class="section-title reveal">
+      <h2>Transparent <span class="text-gradient-primary">Pricing</span></h2>
+      <p>Flexible Solutions for businesses of all sizes.</p>
+    </div>
+    <div class="grid-3">
+      <!-- Standard -->
+      <div class="glass-card pricing-card reveal">
+        <h3 class="pricing-title">Standard Website</h3>
+        <div class="pricing-price">₹5,500</div>
+        <div class="pricing-type">One Time Package</div>
+        <ul class="pricing-features">
+          <li><i class="fa-solid fa-check"></i> 5 Pages Website</li>
+          <li><i class="fa-solid fa-check"></i> WordPress / CMS</li>
+          <li><i class="fa-solid fa-check"></i> Mobile Responsive Design</li>
+          <li><i class="fa-solid fa-check"></i> Social Media Integration</li>
+          <li><i class="fa-solid fa-check"></i> Google Maps Integration</li>
+          <li><i class="fa-solid fa-check"></i> WhatsApp Chat Integration</li>
+          <li><i class="fa-solid fa-check"></i> Basic Chatbot</li>
+          <li><i class="fa-solid fa-check"></i> Contact & Inquiry Forms</li>
+          <li><i class="fa-solid fa-check"></i> Basic SEO Setup</li>
+          <li><i class="fa-solid fa-check"></i> Domain & Hosting Included</li>
+        </ul>
+        <a href="https://wa.me/918610183525" target="_blank" class="btn-outline">Get Started</a>
+      </div>
+      <!-- Business -->
+      <div class="glass-card pricing-card reveal" style="transition-delay: 0.1s;">
+        <h3 class="pricing-title">Business Website</h3>
+        <div class="pricing-price">₹7,500</div>
+        <div class="pricing-type">One Time Package</div>
+        <ul class="pricing-features">
+          <li><i class="fa-solid fa-check"></i> Up to 10 Pages Website</li>
+          <li><i class="fa-solid fa-check"></i> Professional UI Design</li>
+          <li><i class="fa-solid fa-check"></i> Business Email Setup</li>
+          <li><i class="fa-solid fa-check"></i> Speed Optimization</li>
+          <li><i class="fa-solid fa-check"></i> Security Hardening</li>
+          <li><i class="fa-solid fa-check"></i> WhatsApp Integration</li>
+          <li><i class="fa-solid fa-check"></i> Social Media Integration</li>
+          <li><i class="fa-solid fa-check"></i> Basic Chatbot</li>
+          <li><i class="fa-solid fa-check"></i> On-Page SEO</li>
+          <li><i class="fa-solid fa-check"></i> Domain & Hosting Included</li>
+        </ul>
+        <a href="https://wa.me/918610183525" target="_blank" class="btn-outline">Choose Plan</a>
+      </div>
+      <!-- Premium -->
+      <div class="glass-card pricing-card popular reveal" style="transition-delay: 0.2s; transform: scale(1.05); z-index:2;">
+        <div class="popular-badge">⭐ Most Popular</div>
+        <h3 class="pricing-title text-gradient-primary">Premium Website</h3>
+        <div class="pricing-price">₹15,000</div>
+        <div class="pricing-type">One Time Package</div>
+        <ul class="pricing-features">
+          <li><i class="fa-solid fa-check"></i> Up to 30 Pages Website</li>
+          <li><i class="fa-solid fa-check"></i> Custom UI/UX Design</li>
+          <li><i class="fa-solid fa-check"></i> Advanced AI Chatbot Integration</li>
+          <li><i class="fa-solid fa-check"></i> Google Analytics Integration</li>
+          <li><i class="fa-solid fa-check"></i> Performance & Security Optimization</li>
+          <li><i class="fa-solid fa-check"></i> Contact & Inquiry Forms</li>
+          <li><i class="fa-solid fa-check"></i> SEO-Ready Architecture</li>
+          <li><i class="fa-solid fa-check"></i> WhatsApp & Social Media Integration</li>
+          <li><i class="fa-solid fa-check"></i> Domain & Hosting Included</li>
+        </ul>
+        <a href="https://wa.me/918610183525" target="_blank" class="btn-primary">Start Premium</a>
+      </div>
+    </div>
+  </section>
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="container">
+    <div class="section-title reveal">
+      <h2>Our <span class="text-gradient-primary">Portfolio</span></h2>
+      <p>Take a look at some of the stunning digital experiences we've crafted.</p>
+    </div>
+    <div class="marquee-container" id="portfolio-marquee">
+      <!-- Portfolio Item -->
+      <a href="https://travdestinytours.com/" target="_blank" class="portfolio-card glass-card reveal">
+        <div class="portfolio-img">
+          <div class="portfolio-overlay">
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+          <!-- Website screenshot --><div class="portfolio-image-wrapper"><img src="https://image.thum.io/get/width/600/crop/800/https://travdestinytours.com/" alt="Portfolio Project" loading="lazy"></div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Trav Destiny Tours</h3>
+          <p>Travel & Tourism Platform</p>
+        </div>
+      </a>
+      <!-- Portfolio Item -->
+      <a href="https://tradotacademy.com/" target="_blank" class="portfolio-card glass-card reveal" style="transition-delay: 0.1s;">
+        <div class="portfolio-img">
+          <div class="portfolio-overlay">
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+          <!-- Website screenshot --><div class="portfolio-image-wrapper"><img src="https://image.thum.io/get/width/600/crop/800/https://tradotacademy.com/" alt="Portfolio Project" loading="lazy"></div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Tradot Academy</h3>
+          <p>Investment & Education Platform</p>
+        </div>
+      </a>
+      <!-- Portfolio Item -->
+      <a href="https://nidurgems.com/" target="_blank" class="portfolio-card glass-card reveal" style="transition-delay: 0.2s;">
+        <div class="portfolio-img">
+          <div class="portfolio-overlay">
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+          <!-- Website screenshot --><div class="portfolio-image-wrapper"><img src="https://image.thum.io/get/width/600/crop/800/https://nidurgems.com/" alt="Portfolio Project" loading="lazy"></div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Nidur Gems</h3>
+          <p>Gemstone & Jewellery E-commerce</p>
+        </div>
+      </a>
+      <!-- Portfolio Item -->
+      <a href="https://finefair.qa/" target="_blank" class="portfolio-card glass-card reveal" style="transition-delay: 0.3s;">
+        <div class="portfolio-img">
+          <div class="portfolio-overlay">
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+          <!-- Website screenshot --><div class="portfolio-image-wrapper"><img src="https://image.thum.io/get/width/600/crop/800/https://finefair.qa/" alt="Portfolio Project" loading="lazy"></div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Finefair</h3>
+          <p>Electronics & Mobile Accessories E-commerce</p>
+        </div>
+      </a>
+      <!-- Portfolio Item -->
+      <a href="https://taqath.com/" target="_blank" class="portfolio-card glass-card reveal" style="transition-delay: 0.4s;">
+        <div class="portfolio-img">
+          <div class="portfolio-overlay">
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+          <!-- Website screenshot --><div class="portfolio-image-wrapper"><img src="https://image.thum.io/get/width/600/crop/800/https://taqath.com/" alt="Portfolio Project" loading="lazy"></div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Taqath</h3>
+          <p>Corporate Services & Business Setup</p>
+        </div>
+      </a>
+      <!-- Portfolio Item -->
+      <a href="https://welmox.com/" target="_blank" class="portfolio-card glass-card reveal" style="transition-delay: 0.5s;">
+        <div class="portfolio-img">
+          <div class="portfolio-overlay">
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+          <!-- Website screenshot --><div class="portfolio-image-wrapper"><img src="https://image.thum.io/get/width/600/crop/800/https://welmox.com/" alt="Portfolio Project" loading="lazy"></div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Welmox</h3>
+          <p>Corporate Gifts & Brand Merchandise</p>
+        </div>
+      </a>
+      <!-- Portfolio Item -->
+      <a href="https://altameernexus.com/" target="_blank" class="portfolio-card glass-card reveal" style="transition-delay: 0.6s;">
+        <div class="portfolio-img">
+          <div class="portfolio-overlay">
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+          <!-- Website screenshot --><div class="portfolio-image-wrapper"><img src="https://image.thum.io/get/width/600/crop/800/https://altameernexus.com/" alt="Portfolio Project" loading="lazy"></div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Al Tameer Nexus</h3>
+          <p>Kitchen Cabinets & Modular Solutions</p>
+        </div>
+      </a>
+      <!-- Portfolio Item -->
+      <a href="https://resorajewellery.com/" target="_blank" class="portfolio-card glass-card reveal" style="transition-delay: 0.7s;">
+        <div class="portfolio-img">
+          <div class="portfolio-overlay">
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+          <!-- Website screenshot --><div class="portfolio-image-wrapper"><img src="https://image.thum.io/get/width/600/crop/800/https://resorajewellery.com/" alt="Portfolio Project" loading="lazy"></div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Resora Jewellery</h3>
+          <p>Gold, Diamond & Gemstone Retailer</p>
+        </div>
+      </a>
+      <!-- Portfolio Item -->
+      <a href="https://karinex.ae/" target="_blank" class="portfolio-card glass-card reveal" style="transition-delay: 0.8s;">
+        <div class="portfolio-img">
+          <div class="portfolio-overlay">
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+          <!-- Website screenshot --><div class="portfolio-image-wrapper"><img src="https://image.thum.io/get/width/600/crop/800/https://karinex.ae/" alt="Portfolio Project" loading="lazy"></div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Karinex Logistics</h3>
+          <p>Global Shipping & Logistics</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="container">
+    <div class="section-title reveal">
+      <h2>Development <span class="text-gradient-secondary">Process</span></h2>
+      <p>Our proven methodology to turn your ideas into digital reality.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content glass-card">
+          <div class="timeline-step">Step 1</div>
+          <h3>Consultation</h3>
+          <p style="color: var(--text-secondary); margin-top:8px;">Understanding your business goals and requirements.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content glass-card">
+          <div class="timeline-step">Step 2</div>
+          <h3>Planning</h3>
+          <p style="color: var(--text-secondary); margin-top:8px;">Creating a roadmap, sitemap, and wireframes for the project.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content glass-card">
+          <div class="timeline-step">Step 3</div>
+          <h3>UI/UX Design</h3>
+          <p style="color: var(--text-secondary); margin-top:8px;">Crafting premium, user-centric interfaces and experiences.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content glass-card">
+          <div class="timeline-step">Step 4</div>
+          <h3>Development</h3>
+          <p style="color: var(--text-secondary); margin-top:8px;">Building the application using cutting-edge technologies.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content glass-card">
+          <div class="timeline-step">Step 5</div>
+          <h3>Testing</h3>
+          <p style="color: var(--text-secondary); margin-top:8px;">Rigorous quality assurance for bugs, performance, and security.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content glass-card">
+          <div class="timeline-step">Step 6</div>
+          <h3>Launch</h3>
+          <p style="color: var(--text-secondary); margin-top:8px;">Deploying your project to the live server safely.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content glass-card">
+          <div class="timeline-step">Step 7</div>
+          <h3>Support</h3>
+          <p style="color: var(--text-secondary); margin-top:8px;">Providing ongoing maintenance and premium support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="container faq-container">
+    <div class="section-title reveal">
+      <h2>Frequently Asked <span class="text-gradient-primary">Questions</span></h2>
+    </div>
+    
+    <div class="faq-item reveal">
+      <div class="faq-question">
+        How long does a website take? <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          A standard 5-page website typically takes 1-2 weeks. Custom or premium websites with advanced features may take 3-4 weeks depending on the complexity of the design and integration.
+        </div>
+      </div>
+    </div>
+    
+    <div class="faq-item reveal">
+      <div class="faq-question">
+        Do you provide hosting? <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Yes! All our website packages include domain and secure hosting for the first year, ensuring a hassle-free launch for your business.
+        </div>
+      </div>
+    </div>
+    
+    <div class="faq-item reveal">
+      <div class="faq-question">
+        Is SEO included? <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Yes, basic SEO setup is included in the standard package, while higher tier packages include On-Page SEO and SEO-ready architecture to help you rank better on search engines.
+        </div>
+      </div>
+    </div>
+    
+    <div class="faq-item reveal">
+      <div class="faq-question">
+        Can I update the website myself? <i class="fa-solid fa-plus"></i>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Absolutely. We build most of our websites with an easy-to-use Admin Panel (CMS like WordPress or custom backend) allowing you to manage content, images, and products easily.
+        </div>
+      </div>
+    </div>
+    
+    <div class="faq-item reveal">
+      <div class="faq-question">
+        Do you offer support after launch? <i class="fa-solid fa-plus"></i>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Yes, we provide lifetime technical guidance and premium support packages to ensure your digital product stays updated, secure, and performs optimally.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="container" style="padding-bottom: 0;">
+    <div class="section-title reveal">
+      <h2>Client <span class="text-gradient-primary">Testimonials</span></h2>
+      <p>Hear what our partners have to say about our premium digital solutions.</p>
+    </div>
+    <div class="marquee-container" id="testimonial-marquee">
+      <!-- Card 1 -->
+      <div class="glass-card testimonial-card reveal">
+        <div class="testimonial-content">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>"Fana Technology completely transformed our online presence. Their web design team is top-notch and delivered beyond our expectations."</p>
+        </div>
+        <div class="testimonial-author">
+          <div class="author-info">
+            <h4>Rajesh Kumar</h4>
+            <span>CEO, Tradot Academy</span>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="glass-card testimonial-card reveal">
+        <div class="testimonial-content">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>"The mobile app they built for us is incredibly smooth and user-friendly. Outstanding support and premium quality all around."</p>
+        </div>
+        <div class="testimonial-author">
+          <div class="author-info">
+            <h4>Priya Sharma</h4>
+            <span>Founder, Welmox International</span>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="glass-card testimonial-card reveal">
+        <div class="testimonial-content">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>"Their billing software is a game-changer. It streamlined our entire operation. Highly recommend their enterprise solutions!"</p>
+        </div>
+        <div class="testimonial-author">
+          <div class="author-info">
+            <h4>Arun Patel</h4>
+            <span>Director, Trav Destiny Tours</span>
+          </div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="glass-card testimonial-card reveal">
+        <div class="testimonial-content">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>"From logo design to SEO, they handled everything flawlessly. We saw a 300% increase in traffic in just three months."</p>
+        </div>
+        <div class="testimonial-author">
+          <div class="author-info">
+            <h4>Sneha Desai</h4>
+            <span>Manager, Shree Shyam Enterprises</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & CTA -->
+  <section id="contact" class="container" style="padding-top: 0;">
+    <div class="cta-section reveal">
+      <h2>Ready to Build Your Next <span class="text-gradient-primary">Digital Project?</span></h2>
+      <p>Let's create a modern, fast, and beautiful digital experience for your business.</p>
+      <div class="hero-buttons" style="justify-content: center;">
+        <a href="javascript:void(0)" class="btn-primary open-modal-btn">Start Your Project</a>
+        <a href="mailto:info@fanatechnology.com" class="btn-outline">Contact Us</a>
+      </div>
     </div>
 
-    <!-- AI Chatbot -->
-    <div class="chatbot-container">
-        <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open AI Chat">
-            <i class="ph ph-robot"></i>
-        </button>
-        <div class="chatbot-window" id="chatbotWindow">
-            <div class="chatbot-header">
-                <div class="chatbot-title">
-                    <i class="ph ph-sparkle"></i>
-                    <div>
-                        <h4>Arshad AI</h4>
-                        <p>Ask me anything!</p>
-                    </div>
-                </div>
-                <button class="close-chatbot" id="closeChatbot"><i class="ph ph-x"></i></button>
-            </div>
-            <div class="chatbot-messages" id="chatbotMessages">
-                <div class="message ai-message">
-                    Hi! I'm Arshad's AI assistant. How can I help you with your brand identity today?
-                </div>
-                <div class="suggested-questions">
-                    <button class="suggested-q">What is your pricing?</button>
-                    <button class="suggested-q">How long does a logo take?</button>
-                    <button class="suggested-q">How do I start a project?</button>
-                </div>
-            </div>
-            <form class="chatbot-input" id="chatbotForm">
-                <input type="text" id="chatbotInputField" placeholder="Type your question..." required autocomplete="off">
-                <button type="submit"><i class="ph ph-paper-plane-right"></i></button>
-            </form>
+    <div class="grid-2" style="margin-top: 80px;" id="contact-form">
+      <!-- Contact Info -->
+      <div class="contact-info reveal">
+        <h2 style="font-size: 2.5rem; margin-bottom: 40px;">Contact <span class="text-gradient-secondary">Us</span></h2>
+        
+        <div class="info-item">
+          <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+          <div>
+            <h4>Phone</h4>
+            <p>86101 83525</p>
+          </div>
         </div>
-    </div>
-
-    <!-- Popup Form -->
-    <div class="popup-overlay" id="leadPopup">
-        <div class="popup-content">
-            <button class="close-popup" id="closePopup" aria-label="Close"><i class="ph ph-x"></i></button>
-            <div class="popup-header">
-                <h3>Let's Create Something!</h3>
-                <p>Get a free consultation for your project.</p>
-            </div>
-            <form class="contact-form" id="popupForm">
-                <div class="form-group">
-                    <input type="text" required placeholder="Your Name">
-                </div>
-                <div class="form-group">
-                    <input type="text" required placeholder="WhatsApp Number">
-                </div>
-                <button type="submit" class="btn btn-primary submit-btn" style="width: 100%;">Get Free Quote <i class="ph ph-paper-plane-right"></i></button>
-            </form>
+        
+        <div class="info-item">
+          <div class="info-icon"><i class="fa-brands fa-whatsapp"></i></div>
+          <div>
+            <h4>WhatsApp</h4>
+            <p>86101 83525</p>
+          </div>
         </div>
-    </div>
+        
+        <div class="info-item">
+          <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <h4>Email</h4>
+            <p><a href="mailto:info@fanatechnology.com" style="color: var(--text-secondary); text-decoration: none;">info@fanatechnology.com</a></p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-icon"><i class="fa-brands fa-instagram"></i></div>
+          <div>
+            <h4>Instagram</h4>
+            <p>@fanatechnology</p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-icon"><i class="fa-regular fa-clock"></i></div>
+          <div>
+            <h4>Business Hours</h4>
+            <p>Monday – Saturday<br>9:00 AM – 7:00 PM</p>
+          </div>
+        </div>
+      </div>
 
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+      <!-- Contact Form -->
+      <div class="glass-card contact-form reveal">
+        <h3 style="font-size: 1.75rem; margin-bottom: 24px;">Request a Free Quote</h3>
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Company Name (Optional)">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" class="form-control" placeholder="Phone Number" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <select class="form-control" required>
+              <option value="" disabled selected>Service Required</option>
+              <option value="web">Website Development</option>
+              <option value="app">Mobile App Development</option>
+              <option value="design">Graphic Design</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" rows="4" placeholder="Project Details" required></textarea>
+          </div>
+          <div class="form-group" style="display: flex; align-items: center; gap: 10px;">
+            <input type="checkbox" id="privacy" required style="width: 18px; height: 18px; accent-color: #06B6D4;">
+            <label for="privacy" style="color: var(--text-secondary); font-size: 0.9rem;">I agree to the Privacy Policy.</label>
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%; margin-top: 10px; font-size: 1.1rem; padding: 16px;">Request Free Quote</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#" class="logo" style="background: white; padding: 6px 16px; border-radius: 8px; display: inline-flex; align-items: center; margin-bottom: 20px;">
+              <img src="images/logo.png" alt="Fana Technology" style="height: 32px; width: auto; object-fit: contain;">
+            </a>
+            <p style="color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">
+            Transforming Ideas Into Digital Success. We build premium digital solutions for forward-thinking businesses.
+          </p>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <ul class="footer-links">
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">App Development</a></li>
+            <li><a href="#">Custom Software</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Packages</h4>
+          <ul class="footer-links">
+            <li><a href="#pricing">Standard Website</a></li>
+            <li><a href="#pricing">Business Website</a></li>
+            <li><a href="#pricing">Premium Website</a></li>
+            <li><a href="#">Custom Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="footer-links" style="color: var(--text-secondary);">
+            <li style="margin-bottom: 12px;"><i class="fa-solid fa-phone" style="width: 20px; color: var(--accent-color);"></i> 86101 83525</li>
+            <li style="margin-bottom: 12px;"><i class="fa-solid fa-envelope" style="width: 20px; color: var(--accent-color);"></i> info@fanatechnology.com</li>
+            <li style="margin-bottom: 12px;"><i class="fa-solid fa-location-dot" style="width: 20px; color: var(--accent-color);"></i> India</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 Fana Technology. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Actions -->
+  <div class="floating-actions">
+    <a href="https://wa.me/918610183525" target="_blank" class="float-btn btn-whatsapp" style="text-decoration: none;">
+      <i class="fa-brands fa-whatsapp"></i>
+      <div class="float-tooltip">WhatsApp</div>
+    </a>
+    <a href="tel:8610183525" class="float-btn btn-call" style="text-decoration: none;">
+      <i class="fa-solid fa-phone"></i>
+      <div class="float-tooltip">Call Now</div>
+    </a>
+    <button class="float-btn btn-ig">
+      <i class="fa-brands fa-instagram"></i>
+      <div class="float-tooltip">Instagram</div>
+    </button>
+    <button class="float-btn btn-chat" id="chatToggle">
+      <i class="fa-solid fa-robot"></i>
+      <div class="float-tooltip">AI Assistant</div>
+    </button>
+  </div>
+
+  <!-- AI Chat Assistant -->
+  <div class="chat-widget" id="chatWidget">
+    <div class="chat-header">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <i class="fa-solid fa-robot" style="font-size:1.5rem;"></i>
+        <div>
+          <div style="font-weight:600;">Fana AI Assistant</div>
+          <div style="font-size:0.8rem; opacity:0.8;">Online</div>
+        </div>
+      </div>
+      <i class="fa-solid fa-times" style="cursor:pointer;" id="chatClose"></i>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="chat-msg">Hello! 👋 Welcome to Fana Technology. How can I help you build your digital success today?</div>
+    </div>
+    <div class="chat-quick-replies">
+      <button class="reply-btn">Website Development</button>
+      <button class="reply-btn">Mobile App</button>
+      <button class="reply-btn">Graphic Design</button>
+      <button class="reply-btn">Pricing</button>
+      <button class="reply-btn">Contact Team</button>
+    </div>
+  </div>
+  </div>
+
+  <!-- Quote Modal Popup -->
+  <div class="modal-overlay" id="quoteModal">
+    <div class="modal-content glass-card">
+      <div class="modal-header">
+        <h3 style="font-size: 1.5rem;">Request a <span class="text-gradient-primary">Quote</span></h3>
+        <button class="modal-close" id="closeModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group" style="margin-bottom: 15px;">
+            <input type="text" class="form-control" placeholder="Full Name" required>
+          </div>
+          <div class="form-group" style="margin-bottom: 15px;">
+            <input type="email" class="form-control" placeholder="Email Address" required>
+          </div>
+          <div class="form-group" style="margin-bottom: 15px;">
+            <input type="tel" class="form-control" placeholder="Phone Number" required>
+          </div>
+          <div class="form-group" style="margin-bottom: 15px;">
+            <select class="form-control" required>
+              <option value="" disabled selected>Service Required</option>
+              <option value="web">Website Development</option>
+              <option value="app">Mobile App Development</option>
+              <option value="design">Graphic Design</option>
+              <option value="billing">Billing Software</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%; margin-top: 10px; font-size: 1.1rem; padding: 16px;">Submit Request</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <!-- Mobile Bottom Menu -->
+  <div class="mobile-bottom-menu">
+    <a href="#home" class="bottom-menu-item active">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </a>
+    <a href="#services" class="bottom-menu-item">
+      <i class="fa-solid fa-laptop-code"></i>
+      <span>Services</span>
+    </a>
+    <a href="#pricing" class="bottom-menu-item">
+      <i class="fa-solid fa-tags"></i>
+      <span>Packages</span>
+    </a>
+    <a href="#contact" class="bottom-menu-item">
+      <i class="fa-solid fa-envelope"></i>
+      <span>Contact</span>
+    </a>
+  </div>
+
+  <script src="js/main.js?v=14"></script>
 </body>
 </html>
+
